@@ -32,7 +32,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow_traffic_on_port_80" {
   to_port           = 80
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_traffic_on_port_80" {
+resource "aws_vpc_security_group_ingress_rule" "allow_traffic_on_port_8080" {
   security_group_id = aws_security_group.sg01.id
   cidr_ipv4         = var.cidr_80
   from_port         = 8080
