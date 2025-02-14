@@ -32,6 +32,15 @@ resource "aws_vpc_security_group_ingress_rule" "allow_traffic_on_port_80" {
   to_port           = 80
 }
 
+resource "aws_vpc_security_group_ingress_rule" "allow_traffic_on_port_80" {
+  security_group_id = aws_security_group.sg01.id
+  cidr_ipv4         = var.cidr_80
+  from_port         = 8080
+  ip_protocol       = var.ip_80
+  to_port           = 8080
+}
+
+
 resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
   security_group_id = aws_security_group.sg01.id
   cidr_ipv4         = var.cidr_ipv4
