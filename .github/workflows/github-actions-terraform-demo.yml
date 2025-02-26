@@ -25,6 +25,12 @@ jobs:
         with:
           terraform_wrapper: false 
 
+      - name: view
+        run: pwd
+
+      - name: view
+        run: ls -ltr
+
       - name: Terraform Fmt
         run: terraform fmt
 
